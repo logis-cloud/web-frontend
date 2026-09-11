@@ -1,0 +1,52 @@
+:root {
+  --kraft: #d9c7a3;
+  --kraft-dark: #c2ac80;
+  --ink: #1c2541;
+  --ink-soft: #3a4266;
+  --paper: #f7f4ec;
+  --stamp: #c1440e;
+  --stamp-dark: #9c360a;
+  --route: #3f6659;
+  --code-black: #14171a;
+  --line: rgba(28, 37, 65, 0.14);
+
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --font-sans: "IBM Plex Sans", system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background: var(--paper);
+  color: var(--code-black);
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-family: inherit;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
