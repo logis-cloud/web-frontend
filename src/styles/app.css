@@ -447,3 +447,30 @@
   border-left: 4px solid var(--route);
   max-width: 320px;
 }
+
+.tabbar {
+  display: flex;
+  gap: 8px;
+}
+
+.tab-btn {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 500;
+  border: 2px solid var(--ink);
+  background: transparent;
+  color: var(--ink);
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.tab-btn:hover {
+  background: rgba(28, 37, 65, 0.08);
+}
+
+.tab-btn.is-active {
+  background: var(--ink);
+  color: var(--paper);
+}
+
