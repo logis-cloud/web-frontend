@@ -1,12 +1,14 @@
 import { useState } from "react";
 import ClientesModule from "./modules/ClientesModule.jsx";
 import VehiculosModule from "./modules/VehiculosModule.jsx";
+import EnviosModule from "./modules/EnviosModule.jsx";
 import "./styles/global.css";
 import "./styles/app.css";
 
 const TABS = [
   { id: "clientes", label: "Clientes", title: "Manifiesto de Clientes", mark: "MS CLIENTES · PYTHON/MYSQL" },
   { id: "vehiculos", label: "Vehículos", title: "Flota de Vehículos", mark: "MS VEHÍCULOS · JAVA/POSTGRESQL" },
+  { id: "envios", label: "Envios", title: "Gestión de envíos", mark: "MS ENVIOS · NODE.JS-MONGODB" },
 ];
 
 export default function App() {
@@ -34,7 +36,11 @@ export default function App() {
         </nav>
       </header>
 
-      {tabId === "clientes" ? <ClientesModule /> : <VehiculosModule />}
+      {tabId === "clientes" && <ClientesModule />}
+
+      {tabId === "vehiculos" && <VehiculosModule />}
+
+      {tabId === "envios" && <EnviosModule />}
     </div>
   );
 }
