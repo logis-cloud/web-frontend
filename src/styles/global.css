@@ -1,21 +1,35 @@
 :root {
-  --kraft: #d9c7a3;
-  --kraft-dark: #c2ac80;
-  --ink: #1c2541;
-  --ink-soft: #3a4266;
-  --paper: #f7f4ec;
-  --stamp: #c1440e;
-  --stamp-dark: #9c360a;
-  --route: #3f6659;
-  --code-black: #14171a;
-  --line: rgba(28, 37, 65, 0.14);
-
+  --ink: #0b1220;
+  --ink-800: #0f1729;
+  --ink-700: #141f38;
+  --ink-600: #1b2947;
+  --ink-500: #243358;
+  --mist: #edeff4;
+  --mist-300: #b7c0d4;
+  --mist-500: #7c88a6;
+  --beacon: #ec9422;
+  --beacon-400: #f5a93b;
+  --route: #22b893;
+  --route-400: #3fd8b4;
+  --alert: #e15b5b;
+  --line: rgba(255, 255, 255, 0.06);
+  --paper: #0b1220;
+  --code-black: #edeff4;
+  --ink-soft: #7c88a6;
+  --stamp: #ec9422;
+  --stamp-dark: #c97a15;
+  --kraft: #0f1729;
   --font-mono: "IBM Plex Mono", ui-monospace, monospace;
   --font-sans: "IBM Plex Sans", system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
 }
 
 * {
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 html,
@@ -27,9 +41,35 @@ body,
 body {
   margin: 0;
   font-family: var(--font-sans);
-  background: var(--paper);
-  color: var(--code-black);
+  background: #0b1220;
+  color: #edeff4;
   -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+}
+
+::selection {
+  background: rgba(236, 148, 34, 0.3);
+  color: #edeff4;
+}
+
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #243358;
+  border-radius: 999px;
 }
 
 button {
@@ -40,13 +80,21 @@ button:focus-visible,
 input:focus-visible,
 select:focus-visible,
 a:focus-visible {
-  outline: 2px solid var(--ink);
+  outline: 2px solid #f5a93b;
   outline-offset: 2px;
 }
 
+option {
+  background: #0f1729;
+  color: #edeff4;
+}
+
 @media (prefers-reduced-motion: reduce) {
-  * {
-    transition: none !important;
-    animation: none !important;
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
   }
 }
