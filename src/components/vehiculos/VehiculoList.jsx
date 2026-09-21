@@ -1,3 +1,5 @@
+import { PlusIcon, SearchIcon } from "../ui/Icons.jsx";
+
 function codigoVehiculo(id) {
   return `VHC-${String(id).padStart(6, "0")}`;
 }
@@ -22,15 +24,21 @@ export default function VehiculoList({
   return (
     <aside className="manifest">
       <div className="manifest-toolbar">
-        <input
-          className="search-input"
-          type="text"
-          placeholder="Buscar por placa, marca o modelo…"
-          value={busqueda}
-          onChange={(e) => onBuscar(e.target.value)}
-        />
+        <div className="search-wrap">
+          <span className="search-icon">
+            <SearchIcon />
+          </span>
+          <input
+            className="search-input"
+            type="text"
+            placeholder="Buscar por placa, marca o modelo…"
+            value={busqueda}
+            onChange={(e) => onBuscar(e.target.value)}
+          />
+        </div>
         <button className="btn btn-primary" onClick={onNuevo}>
-          + Vehículo
+          <PlusIcon />
+          Vehículo
         </button>
       </div>
 

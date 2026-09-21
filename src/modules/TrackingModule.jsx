@@ -24,21 +24,14 @@ function TrackingModule() {
   }
 
 return (
-  <div className="main">
-    <aside className="manifest">
-      <div className="manifest-toolbar">
+  <div className="main tracking-main">
+    <section className="panel tracking-panel">
+      <div className="tracking-search">
         <TrackingSearch onBuscar={buscarTracking} />
       </div>
 
-      <div className="manifest-footer">
-        <span>MS TRACKING</span>
-        <span>consulta por código</span>
-      </div>
-    </aside>
-
-    <section className="panel">
       {cargando && (
-        <p>Cargando detalle...</p>
+        <p className="manifest-loading">Cargando detalle...</p>
       )}
 
       {error && (

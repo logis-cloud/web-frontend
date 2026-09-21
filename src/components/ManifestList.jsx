@@ -1,3 +1,5 @@
+import { PlusIcon, SearchIcon } from "./ui/Icons.jsx";
+
 function codigoCliente(id) {
   return `CLI-${String(id).padStart(6, "0")}`;
 }
@@ -15,15 +17,21 @@ export default function ManifestList({
   return (
     <aside className="manifest">
       <div className="manifest-toolbar">
-        <input
-          className="search-input"
-          type="text"
-          placeholder="Buscar por nombre o email…"
-          value={busqueda}
-          onChange={(e) => onBuscar(e.target.value)}
-        />
+        <div className="search-wrap">
+          <span className="search-icon">
+            <SearchIcon />
+          </span>
+          <input
+            className="search-input"
+            type="text"
+            placeholder="Buscar por nombre o email…"
+            value={busqueda}
+            onChange={(e) => onBuscar(e.target.value)}
+          />
+        </div>
         <button className="btn btn-primary" onClick={onNuevo}>
-          + Cliente
+          <PlusIcon />
+          Cliente
         </button>
       </div>
 

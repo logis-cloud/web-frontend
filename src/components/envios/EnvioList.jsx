@@ -1,3 +1,5 @@
+import { PlusIcon, SearchIcon } from "../ui/Icons.jsx";
+
 export default function EnvioList({
   envios,
   cargando,
@@ -11,19 +13,25 @@ export default function EnvioList({
   return (
     <aside className="manifest">
       <div className="manifest-toolbar">
-        <input
-          className="search-input"
-          type="text"
-          placeholder="Buscar por tracking, pedido o cliente..."
-          value={busqueda}
-          onChange={(e) => onBuscar(e.target.value)}
-        />
+        <div className="search-wrap">
+          <span className="search-icon">
+            <SearchIcon />
+          </span>
+          <input
+            className="search-input"
+            type="text"
+            placeholder="Buscar por tracking, pedido o cliente..."
+            value={busqueda}
+            onChange={(e) => onBuscar(e.target.value)}
+          />
+        </div>
 
         <button
           className="btn btn-primary"
           onClick={onNuevo}
         >
-          + Envío
+          <PlusIcon />
+          Envío
         </button>
       </div>
 
