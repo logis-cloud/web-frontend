@@ -2,6 +2,7 @@ import { useState } from "react";
 import ClientesModule from "./modules/ClientesModule.jsx";
 import VehiculosModule from "./modules/VehiculosModule.jsx";
 import EnviosModule from "./modules/EnviosModule.jsx";
+import TrackingModule from "./modules/TrackingModule.jsx";
 import "./styles/global.css";
 import "./styles/app.css";
 
@@ -9,6 +10,7 @@ const TABS = [
   { id: "clientes", label: "Clientes", title: "Manifiesto de Clientes", mark: "MS CLIENTES · PYTHON/MYSQL" },
   { id: "vehiculos", label: "Vehículos", title: "Flota de Vehículos", mark: "MS VEHÍCULOS · JAVA/POSTGRESQL" },
   { id: "envios", label: "Envios", title: "Gestión de envíos", mark: "MS ENVIOS · NODE.JS-MONGODB" },
+  { id: "tracking", label: "Tracking", title: "Seguimiento de envios", mark: "MS TRACKING . PYTHON" },
 ];
 
 export default function App() {
@@ -41,6 +43,8 @@ export default function App() {
       {tabId === "vehiculos" && <VehiculosModule />}
 
       {tabId === "envios" && <EnviosModule />}
+
+      {tabId === "tracking" && <TrackingModule />}
     </div>
   );
 }
