@@ -1,2 +1,13 @@
+# Local secrets — never commit real env files
 .env
+.env.*
+!.env.example
+
+# Amplify builds from source; Docker is local-only
+Dockerfile
+docker-compose.yml
+docker-compose*.yml
+.dockerignore
+
 node_modules/
+dist/
