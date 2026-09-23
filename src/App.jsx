@@ -5,11 +5,13 @@ import {
   TruckIcon,
   PackageSearchIcon,
   MapPinnedIcon,
+  BarChart3Icon,
 } from "./components/ui/Icons.jsx";
 import ClientesModule from "./modules/ClientesModule.jsx";
 import VehiculosModule from "./modules/VehiculosModule.jsx";
 import EnviosModule from "./modules/EnviosModule.jsx";
 import TrackingModule from "./modules/TrackingModule.jsx";
+import AnalyticsModule from "./modules/AnalyticsModule.jsx";
 import "./styles/global.css";
 import "./styles/app.css";
 
@@ -18,6 +20,7 @@ const TABS = [
   { id: "vehiculos", label: "Vehículos", title: "Vehículos", mark: "MS VEHÍCULOS · JAVA/POSTGRESQL", icon: TruckIcon },
   { id: "envios", label: "Envíos", title: "Envíos", mark: "MS ENVIOS · NODE.JS-MONGODB", icon: PackageSearchIcon },
   { id: "tracking", label: "Seguimiento", title: "Seguimiento de envíos", mark: "MS TRACKING · PYTHON", icon: MapPinnedIcon },
+  { id: "analytics", label: "Analítica", title: "Analítica operativa", mark: "MS ANALYTICS · FASTAPI/ATHENA", icon: BarChart3Icon },
 ];
 
 export default function App() {
@@ -85,6 +88,7 @@ export default function App() {
           {tabId === "vehiculos" && <VehiculosModule />}
           {tabId === "envios" && <EnviosModule />}
           {tabId === "tracking" && <TrackingModule />}
+          {tabId === "analytics" && <AnalyticsModule />}
         </div>
       </div>
     </div>
